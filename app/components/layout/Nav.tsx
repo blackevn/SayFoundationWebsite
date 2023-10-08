@@ -6,7 +6,7 @@ const Nav = () => {
         <div>
         <h1 className='text-xl font-bold'>Say Foundation</h1>
         </div>
-        <div className='flex gap-4 items-center'>
+    <div className='gap-4 items-center hidden lg:flex'>
             <div>Home</div>
             <div>About</div>
             <div>Portfolio</div>

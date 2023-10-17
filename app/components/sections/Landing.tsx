@@ -5,24 +5,6 @@ import {BsArrowUpRight} from 'react-icons/bs'
 import Image from 'next/image'
 import { FaArrowAltCircleRight } from 'react-icons/fa'
 
-{/* <div className='h-full w-full lg:w-[50%] border rounded-xl flex flex-col justify-between relative'>
-<div className='space-y-4 w-full flex justify-between'>
-    <div>
-        <h1 className='text-4xl font-bold'>Help us change lives!</h1>
-        <h1>Join 5000+ People Donate</h1> 
-    </div>
-<div className='h-full '>
-    <Image
-     src={`/CharityPhoto.jpg`}
-    alt='charity photo'
-    width={400}
-    height={100}
-    className='m-0 h-full w-full '
-    />
-</div>
-</div>
-
-</div> */}
 
 const Landing = () => {
   return (

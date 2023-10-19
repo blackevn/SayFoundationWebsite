@@ -8,7 +8,7 @@ import { FaArrowAltCircleRight } from 'react-icons/fa'
 
 const Landing = () => {
   return (
-    <div className='flex flex-col lg:flex-row py-20 px-4 gap-4'>
+    <div className='flex flex-col lg:flex-row pt-20 lg:pt-36 px-4 gap-4'>
 
         <div className='h-full w-full lg:w-[50%] rounded-xl flex flex-col lg:flex-row justify-between relative overflow-hidden min-h-[300px]'>
         <div className='p-4 z-[2] absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-r from-blue-500 via-blue-500 to-blue-500/25 text-white flex flex-col justify-between'>

@@ -3,7 +3,7 @@ import React from 'react'
 const SecondSection = () => {
   return <div className="flex flex-col lg:flex-row p-8 place-items-center bg-[url('/asset.png')] bg-no-repeat bg-contain bg-left-bottom gap-20 lg:bg-none">
         <div className='flex justify-end w-[50%]'>
-            <h1 className='text-7xl w-full text-center lg:text-end z-[3] font-semibold'>
+            <h1 className='text-5xl lg:text-7xl w-full text-center lg:text-end z-[3] font-semibold'>
                 There is no big<br/>
                 impact<br/> without <br/>
                     <span className='text-blue-500 font-extrabold'>

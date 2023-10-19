@@ -14,5 +14,5 @@ export type ButtonProps = {
     tip?: string
     isActive?: boolean
     disabled?: boolean
-  
+    iconModifier?: text
   }

@@ -49,7 +49,7 @@ const Button: React.FC<ButtonProps> = (props) => {
 
      data-tip={tip}
     
-          ><Icon/>
+          ><Icon />
           
             {text}
             {children}

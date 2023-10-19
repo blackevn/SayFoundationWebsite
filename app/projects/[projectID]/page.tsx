@@ -16,7 +16,7 @@ const router = useRouter()
 console.log(filteredProject);
 
 
-    return <div className='pt-20 px-8 min-h-screen w-screen'>
+    return <div className='pt-20 lg:pt-40 min-h-screen px-4 '>
           <Button
           clickEvent={router.back}
           text="Back" 
@@ -24,11 +24,11 @@ console.log(filteredProject);
           modifier='btn cursor-pointer'
           />
             <div className='text-3xl font-bold py-10'>{filteredProject.map(project => project.name)}</div>
-            <div className='w-screen grid place-items-center'>
-            <img alt='image' className=' rounded-lg max-w-4xl' src={filteredProject.map(project => project.image).toString()}/>
+            <div className='w-full grid place-items-center'>
+            <img alt='image' className=' rounded-lg w-full lg:max-w-4xl ' src={filteredProject.map(project => project.image).toString()}/>
             </div>
             <div className='grid place-items-center py-8 w-screen'>
-              <p className='max-w-[700px]'>{filteredProject.map(project => project.description)}</p>
+              <p className=' w-full lg:max-w-[700px] '>{filteredProject.map(project => project.description)}</p>
             </div>
           </div>
   

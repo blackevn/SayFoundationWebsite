@@ -4,8 +4,31 @@ import { CgMenuLeft } from 'react-icons/cg'
 import { VscChromeClose } from 'react-icons/vsc'
 import { Button } from '..'
 import useToggle from '@/app/hooks/useToggle'
+import { NavigationLinks } from '@/types/interfaces'
+import NavLink from './NavLink'
+import Link from 'next/link'
 
 const Nav = () => {
+
+    const links: NavigationLinks[] = [
+        {
+        name: "Home",
+        link: "/"
+        },
+        {
+        name: "Projects",
+        link: "/projects"
+        },
+        {
+        name: "About",
+        link: "/about"
+        },
+        {
+        name: "Contact",
+        link: "/contact"
+        },
+
+    ]
 
  const [ menuToggle, handleToggle ] = useToggle(false)
 
@@ -13,14 +36,12 @@ const Nav = () => {
     <div className='relative'>
    
     <div className='flex justify-between items-center p-4 fixed w-screen box-border z-10 backdrop-blur-xl'>
-        <div>
+        <Link href={`/`} className='cursor-pointer'>
         <img className='w-[150px] lg:w-[200px]' src="/Horizontal@4x.png" alt="Say Family Foundation Logo" />
-        </div>
-    <div className='gap-4 items-center hidden lg:flex'>
-            <div>Home</div>
-            <div>About</div>
-            <div>Portfolio</div>
-            <div>Contact</div>
+        </Link>
+
+       <div className='gap-4 items-center hidden lg:flex'>
+        {links.map(link => (<NavLink name={link.name} link={link.link}/>))}
         </div>
     <div className='lg:hidden'>
         <Button

@@ -16,3 +16,8 @@ export type ButtonProps = {
     disabled?: boolean
     iconModifier?: text
   }
+
+  export interface NavigationLinks {
+    link: string
+    name: string 
+  }

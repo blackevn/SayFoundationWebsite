@@ -32,22 +32,25 @@ const page = () => {
       We work in partnership with local communities, government agencies, and other stakeholders to achieve our goals.
       </p>
 
-      <h1 className="text-xl font-bold mt-4">Key Focus Areas</h1>
+      <h1 className="text-xl font-bold my-4">Key Focus Areas</h1>
+
+      <h1 className="text-lg font-bold mt-4">Education</h1>
 
       <p className="lg:w-[50%]">
-      Education: We have set out to  providing scholarships, building schools, and improving educational infrastructure in selected rural areas 
-
-Healthcare:  We cater for healthcare bills , disease prevention, and health education
-
-Livelihood Support: we help sustain the means of living and income generation for individuals and communities, particularly those facing economic challenges and poverty. These support efforts aim to enhance the overall quality of life by providing people with the necessary skills, resources, and opportunities to secure a stable source of income
-
-Community Development: At Say Family Foundation, community development is at the heart of everything we do. We believe that true and lasting change starts at the grassroots level. Our commitment to community development is reflected in our core values and mission.
-We recognize that communities possess unique insights, strengths, and solutions to their own challenges. By partnering with them, we aim to:
-Empower Communities
-Foster Collaboration
-Build Sustainable Solutions
-Promote Self-Reliance
+      We have set out to  providing scholarships, building schools, and improving educational infrastructure in selected rural areas 
       </p>
+
+      <h1 className="text-lg font-bold mt-4">Healthcare</h1>
+     <p>We cater for healthcare bills , disease prevention, and health education</p> 
+
+      Livelihood Support: we help sustain the means of living and income generation for individuals and communities, particularly those facing economic challenges and poverty. These support efforts aim to enhance the overall quality of life by providing people with the necessary skills, resources, and opportunities to secure a stable source of income
+
+      Community Development: At Say Family Foundation, community development is at the heart of everything we do. We believe that true and lasting change starts at the grassroots level. Our commitment to community development is reflected in our core values and mission.
+      We recognize that communities possess unique insights, strengths, and solutions to their own challenges. By partnering with them, we aim to:
+      Empower Communities
+      Foster Collaboration
+      Build Sustainable Solutions
+      Promote Self-Reliance
         </div>
       </div>
       </div>

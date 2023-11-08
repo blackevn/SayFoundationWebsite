@@ -8,7 +8,9 @@ import ProjectsCards from "./ui/ProjectsCards";
 import Achievements from "./sections/Achievements";
 import TeamSection from "./sections/TeamSection";
 import ContactSection from "./sections/ContactSection";
+import Input from "./ui/Input";
+import MobileMenu from "./ui/MobileMenu";
 export {
     Nav, Footer, Landing, Button, SecondSection, ThirdSection, ProjectsCards,
-    Achievements, TeamSection, ContactSection
+    Achievements, TeamSection, ContactSection, Input, MobileMenu
 }

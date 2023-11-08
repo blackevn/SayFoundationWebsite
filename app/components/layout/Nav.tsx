@@ -2,33 +2,35 @@
 import React from 'react'
 import { CgMenuLeft } from 'react-icons/cg'
 import { VscChromeClose } from 'react-icons/vsc'
-import { Button } from '..'
+import { Button, MobileMenu } from '..'
 import useToggle from '@/app/hooks/useToggle'
 import { NavigationLinks } from '@/types/interfaces'
 import NavLink from './NavLink'
 import Link from 'next/link'
 
+export const links: NavigationLinks[] = [
+    {
+    name: "Home",
+    link: "/"
+    },
+    {
+    name: "Projects",
+    link: "/projects"
+    },
+    {
+    name: "About",
+    link: "/about"
+    },
+    {
+    name: "Contact",
+    link: "/contact"
+    },
+
+]
+
 const Nav = () => {
 
-    const links: NavigationLinks[] = [
-        {
-        name: "Home",
-        link: "/"
-        },
-        {
-        name: "Projects",
-        link: "/projects"
-        },
-        {
-        name: "About",
-        link: "/about"
-        },
-        {
-        name: "Contact",
-        link: "/contact"
-        },
 
-    ]
 
  const [ menuToggle, handleToggle ] = useToggle(false)
 
@@ -52,9 +54,9 @@ const Nav = () => {
         />
         </div>
     </div>
-    {  menuToggle &&  <div className='top-0 right-0 w-screen h-[400px] lg:hidden bg-white box-border'>
+    {  menuToggle &&  <div className='top-0 right-0 w-full lg:hidden bg-white box-border grid place-items-center '>
             <div className=''>
-
+                <MobileMenu links={links}/>
             </div>
         </div>}
     </div>

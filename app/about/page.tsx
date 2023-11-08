@@ -1,6 +1,5 @@
 const page = () => {
-  return (
-    <div className="">
+  return <div className="">
       <img
         alt='Say Family'
         src={'/FamilyColor.jpg'}
@@ -55,7 +54,6 @@ const page = () => {
       </div>
       </div>
     </div>
-  )
 }
 
 export default page

@@ -42,7 +42,7 @@ const Nav = () => {
  const [ menuToggle, handleToggle ] = useToggle(false)
 
   return (
-    <div className='relative'>
+    <div className='relative z-[9999]'>
    
     <div className='flex justify-between items-center p-4 fixed w-screen box-border z-10 backdrop-blur-xl'>
         <Link href={`/`} className='cursor-pointer'>
@@ -62,8 +62,8 @@ const Nav = () => {
         </div>
     </div>
 
-    {  menuToggle &&  <div className={`top-20 right-0 w-full lg:hidden bg-white box-border grid place-items-center  ${menuToggle ? 'absolute z-[999]': ''}`}>
-            <div className=''>
+    {  menuToggle &&  <div className={`top-20 right-0 w-full lg:hidden bg-white box-border grid place-items-center ${menuToggle ? 'z-[9999]': ''}`}>
+            <div className='fixed w-full bg-white'>
                 <MobileMenu links={links}/>
             </div>
         </div>}

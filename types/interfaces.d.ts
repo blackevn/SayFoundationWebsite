@@ -21,4 +21,5 @@ export type ButtonProps = {
     link: string
     name: string 
     path?: boolean
+    clicked?: () => void
   }

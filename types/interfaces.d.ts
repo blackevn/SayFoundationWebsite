@@ -20,4 +20,5 @@ export type ButtonProps = {
   export interface NavigationLinks {
     link: string
     name: string 
+    path?: boolean
   }

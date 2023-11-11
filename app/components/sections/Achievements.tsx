@@ -1,3 +1,8 @@
+
+'use client'
+
+import { motion } from "framer-motion"
+
 interface AchievementsTypes {
     title: string
     number: string
@@ -24,12 +29,26 @@ const Achievements = () => {
 ]
 
   return (
-    <div className="flex flex-col lg:flex-row w-full justify-around py-8">{achievements.map(item => (
-        <div key={item.number} className="grid place-items-center">
+    <div className="flex flex-col lg:flex-row w-full justify-around py-8">{achievements.map((item, i) => (
+        <motion.div 
+        initial={{
+            y: 20,
+            opacity: 0
+        }}
+        whileInView={{
+            y: 0,
+            opacity: 1,
+            transition: {
+                delay: i * 0.4,
+                ease: 'easeIn'
+            }
+        }}
+        key={item.number} className="grid place-items-center">
         <h1 className="text-7xl font-bold text-blue-500">{item.number}</h1>
-        <h1 className="text-center p-4">{item.title}</h1>
+        <h1 className="text-center p-4 font-light">{item.title}</h1>
       
-    </div>))}</div>
+    </motion.div>))}
+    </div>
   )
 }
 

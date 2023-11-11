@@ -10,7 +10,8 @@ import TeamSection from "./sections/TeamSection";
 import ContactSection from "./sections/ContactSection";
 import Input from "./ui/Input";
 import MobileMenu from "./ui/MobileMenu";
+import BG from "./ui/BG";
 export {
     Nav, Footer, Landing, Button, SecondSection, ThirdSection, ProjectsCards,
-    Achievements, TeamSection, ContactSection, Input, MobileMenu
+    Achievements, TeamSection, ContactSection, Input, MobileMenu, BG
 }

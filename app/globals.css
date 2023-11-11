@@ -4,3 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
+.icons{
+    @apply lg:w-40 lg:h-40 bg-no-repeat bg-contain absolute
+}

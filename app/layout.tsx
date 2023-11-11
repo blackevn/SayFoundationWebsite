@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html data-theme="light" lang="en">
-      <body className={`box-content ${inter.className}`}>
+      <body className={`box-content ${inter.className} relative`}>
       <Nav/>
     {children}
       <Footer/>

@@ -7,6 +7,7 @@ import useToggle from '@/app/hooks/useToggle'
 import { NavigationLinks } from '@/types/interfaces'
 import NavLink from './NavLink'
 import Link from 'next/link'
+import { usePathname, useRouter } from 'next/navigation'
 
 export const links: NavigationLinks[] = [
     {
@@ -29,7 +30,13 @@ export const links: NavigationLinks[] = [
 ]
 
 const Nav = () => {
+    const pathname: any = usePathname();
 
+    const logoWhite = pathname === '/about'
+
+    console.log(pathname);
+
+    
 
 
  const [ menuToggle, handleToggle ] = useToggle(false)
@@ -39,11 +46,11 @@ const Nav = () => {
    
     <div className='flex justify-between items-center p-4 fixed w-screen box-border z-10 backdrop-blur-xl'>
         <Link href={`/`} className='cursor-pointer'>
-        <img className='w-[150px] lg:w-[200px]' src="/Horizontal@4x.png" alt="Say Family Foundation Logo" />
+        <img className='w-[150px] lg:w-[200px]' src={logoWhite ? "/WhiteLogo.png" : "/Horizontal@4x.png"}alt="Say Family Foundation Logo" />
         </Link>
 
        <div className='gap-4 items-center hidden lg:flex'>
-        {links.map(link => (<NavLink name={link.name} link={link.link}/>))}
+        {links.map(link => (<NavLink path={logoWhite} name={link.name} link={link.link}/>))}
         </div>
     <div className='lg:hidden'>
         <Button
@@ -54,7 +61,8 @@ const Nav = () => {
         />
         </div>
     </div>
-    {  menuToggle &&  <div className='top-0 right-0 w-full lg:hidden bg-white box-border grid place-items-center '>
+
+    {  menuToggle &&  <div className={`top-20 right-0 w-full lg:hidden bg-white box-border grid place-items-center  ${menuToggle ? 'absolute z-[999]': ''}`}>
             <div className=''>
                 <MobileMenu links={links}/>
             </div>

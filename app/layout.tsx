@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Footer, Nav } from './components'
+import { GeneralAppContext } from './context/AppContext'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,9 +19,11 @@ export default function RootLayout({
   return (
     <html data-theme="light" lang="en">
       <body className={`box-content ${inter.className} relative`}>
-      <Nav/>
-    {children}
-      <Footer/>
+        <GeneralAppContext>
+          <Nav/>
+           {children}
+          <Footer/>
+        </GeneralAppContext>
     </body>
     </html>
   )

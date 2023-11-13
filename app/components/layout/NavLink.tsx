@@ -1,7 +1,10 @@
+'use client'
+
 import Link from "next/link";
 import { FaHome } from "react-icons/fa";
 import { NavigationLinks } from "@/types/interfaces";
 import { usePathname } from "next/navigation";
+import { useGeneralContext } from "@/app/context/AppContext";
 
 const NavLink: React.FC<NavigationLinks> = (props) => {
 
@@ -9,14 +12,15 @@ const NavLink: React.FC<NavigationLinks> = (props) => {
 
   const pathname = usePathname()
   const active = link === pathname
-  
+  const { handleToggle } = useGeneralContext()
 
 
   return <>
 
-            <Link onClick={clicked} className={`w-full p-2 rounded-md text-center ${active ? 'bg-blue-500 text-white' : 'text-black'} ${path ? 'text-white' : 'text-black'}`} href={link}>
+            <Link className={`w-full p-2 rounded-md text-center ${active ? 'bg-blue-500 text-white' : 'text-black'} ${path ? 'text-white' : 'text-black'}`} href={link}>
 
-          <div  className="grid place-content-baselinegap-4 items-center w-full ">
+          <div onClick={ handleToggle} 
+          className="grid place-content-baselinegap-4 items-center w-full ">
 
            <p className="">{name}</p>
 

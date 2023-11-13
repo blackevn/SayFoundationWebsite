@@ -17,8 +17,8 @@ const Button: React.FC<ButtonProps> = (props) => {
            modifier,
            tip,
            isActive,
-           disabled
-           
+           disabled,
+           iconModifier
           
           } = props
 
@@ -49,7 +49,7 @@ const Button: React.FC<ButtonProps> = (props) => {
 
      data-tip={tip}
     
-          ><Icon />
+          ><Icon className={iconModifier}/>
           
             {text}
             {children}

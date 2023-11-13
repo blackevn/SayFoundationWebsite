@@ -3,7 +3,7 @@
 import { easeIn, motion } from "framer-motion"
 const page = () => {
   return <div className="grid place-items-center">
-    <div className="mb-4">
+    <div className="mt-8 ">
       <img
         alt='Say Family'
         src={'/FamilyColor.jpg'}

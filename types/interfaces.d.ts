@@ -17,9 +17,27 @@ export type ButtonProps = {
     iconModifier?: text
   }
 
+    
+export interface ContextData {
+  width: number
+  height: number
+  menuToggle: boolean
+  handleToggle: () => void
+  setMenuToggle?:  Dispatch<SetStateAction<boolean>>
+
+}
+
+
   export interface NavigationLinks {
     link: string
     name: string 
     path?: boolean
     clicked?: () => void
   }
+
+
+export interface IProps {
+
+  children: React.ReactNode | React.ReactNode[] | JSX.Element | JSX.Element[]
+    
+}

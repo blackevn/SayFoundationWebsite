@@ -8,6 +8,7 @@ import { NavigationLinks } from '@/types/interfaces'
 import NavLink from './NavLink'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
+import { useGeneralContext } from '@/app/context/AppContext'
 
 export const links: NavigationLinks[] = [
     {
@@ -39,14 +40,14 @@ const Nav = () => {
     
 
 
- const [ menuToggle, handleToggle ] = useToggle(false)
+ const { menuToggle, handleToggle } = useGeneralContext()
 
   return (
     <div className='relative z-[9999]'>
    
-    <div className='flex justify-between items-center p-4 fixed w-screen box-border z-10 backdrop-blur-xl'>
+    <div className={`flex justify-between items-center p-4 fixed w-screen box-border z-10 backdrop-blur-xl ${logoWhite && "bg-[#23283B]"}`}>
         <Link href={`/`} className='cursor-pointer'>
-        <img className='w-[150px] lg:w-[200px]' src={logoWhite ? "/WhiteLogo.png" : "/Horizontal@4x.png"}alt="Say Family Foundation Logo" />
+        <img className='w-[150px] lg:w-[200px]' src={logoWhite ? "/WhiteLogo.png" : "/Horizontal@4x.png"} alt="Say Family Foundation Logo" />
         </Link>
 
        <div className='gap-4 items-center hidden lg:flex'>
@@ -56,14 +57,15 @@ const Nav = () => {
         <Button
         clickEvent={handleToggle}
         icon={CgMenuLeft}
+        iconModifier={logoWhite && "text-white"}
         text=''
         modifier='text-xl'
         />
         </div>
     </div>
 
-    {  menuToggle &&  <div className={`top-20 right-0 w-full lg:hidden bg-white box-border grid place-items-center ${menuToggle ? 'z-[9999]': ''}`}>
-            <div className='fixed w-full bg-white'>
+    {  menuToggle &&  <div className={`top-20 right-0 w-full lg:hidden box-border grid place-items-center ${menuToggle ? 'z-[9999]': ''}`}>
+            <div className='fixed w-full backdrop-blur-lg'>
                 <MobileMenu links={links}/>
             </div>
         </div>}

@@ -48,15 +48,15 @@ const ThirdSection = () => {
       initial={{
         x: -20,
         opacity: 0
-    }}
-      whileInView={{
-          x: 0,
-          opacity: 1,
-          transition: {
-              delay: i * 0.3,
-              ease: 'easeIn'
-          }
       }}
+        whileInView={{
+            x: 0,
+            opacity: 1,
+            transition: {
+                delay: i * 0.3,
+                ease: 'easeIn'
+            }
+        }}
       className="w-full" key={card.id}>
       <ProjectsCards 
         name={card.name}

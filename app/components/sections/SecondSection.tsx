@@ -24,7 +24,7 @@ const SecondSection = () => {
             }}
         className="flex flex-col lg:flex-row p-8 place-items-center bg-[url('/asset.png')] bg-no-repeat bg-contain bg-left-bottom lg:gap-20 lg:bg-none">
         <div
-        className='flex justify-end w-[50%]'>
+        className='flex justify-end lg:w-[50%]'>
             <div className='text-2xl lg:text-4xl w-full text-center lg:text-end z-[3] font-semibold relative'>
                 <h1 className="font-thin">
                 There is no big<br/>

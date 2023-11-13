@@ -32,7 +32,7 @@ const SecondSection = () => {
                 </h1> 
                 <motion.h1
         
-                className='text-blue-500 font-extrabold text-7xl lg:right-0 backdrop-blur-md'>
+                className='text-blue-500 font-extrabold text-4xl lg:text-7xl lg:right-0 backdrop-blur-md text-center'>
                 Big
                 Action
                 </motion.h1> 

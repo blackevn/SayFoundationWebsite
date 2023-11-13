@@ -22,7 +22,7 @@ const page = () => {
             transition: { duration: 1, ease: easeIn },
             rotateY: 0
           }}
-        className="icons bg-[url('/Triangle.png')] right-0 bottom-0"></motion.div>
+        className="icons bg-[url('/Triangle.png')] right-0 bottom-0 mt-4"></motion.div>
         <motion.div 
            initial={{
             opacity: 0,

@@ -9,7 +9,7 @@ const Footer = () => {
   const pathname: any = usePathname();
   const footerColor = pathname === '/about'
 
-  return <footer className={`footer p-10 ${ footerColor && 'bg-[#191A26] text-white'}`}>
+  return <footer className={`footer p-10 ${ footerColor && 'bg-[#191A26] text-white'} dark:bg-[#191A26] dark:text-gray-300`}>
    <Link href={`/`} className='cursor-pointer'>
       <img className='w-[150px] lg:w-[200px]' src={footerColor ? "/WhiteLogo.png" : "/Horizontal@4x.png"} alt="Say Family Foundation Logo" />
         </Link>

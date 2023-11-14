@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html data-theme="light" lang="en">
-      <body className={`box-content relative`}>
+      <body className={`box-content relative dark:bg-[#191A26] dark:text-gray-300`}>
         <GeneralAppContext>
           <Nav/>
            {children}

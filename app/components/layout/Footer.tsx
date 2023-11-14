@@ -1,5 +1,6 @@
 'use client'
 
+import { useGeneralContext } from '@/app/context/AppContext';
 import Link from 'next/link'
 import { usePathname } from 'next/navigation';
 import React from 'react'
@@ -8,10 +9,11 @@ const Footer = () => {
 
   const pathname: any = usePathname();
   const footerColor = pathname === '/about'
+  const { menuToggle, handleToggle, darkMode, toggleDarkMode, setDarkMode } = useGeneralContext()
 
   return <footer className={`footer p-10 ${ footerColor && 'bg-[#191A26] text-white'} dark:bg-[#191A26] dark:text-gray-300`}>
    <Link href={`/`} className='cursor-pointer'>
-      <img className='w-[150px] lg:w-[200px]' src={footerColor ? "/WhiteLogo.png" : "/Horizontal@4x.png"} alt="Say Family Foundation Logo" />
+      <img className='w-[150px] lg:w-[200px]' src={ footerColor || darkMode ? "/WhiteLogo.png" : "/Horizontal@4x.png"} alt="Say Family Foundation Logo" />
         </Link>
   <nav>
     <header className="footer-title">Services</header> 

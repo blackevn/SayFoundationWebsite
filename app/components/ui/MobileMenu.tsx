@@ -14,9 +14,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ links }) => {
 
   return <div className="pt-20 w-screen h-screen grid place-items-center">
 
-        <div>
-            <Toggle icon={FaAdjust} toggleEvent={ toggleDarkMode } on={FaSun} off={FaMoon} modifier={`${darkMode ? 'text-white' : ''}`} modifier1={''} modifier2={''} checked={darkMode} placeholder={''}/>
-        </div>
+        
             <div className="p-8 flex flex-col space-y-2 w-full font-bold">
             {links.map(link => (<NavLink key={link.name} link={link.link} name={link.name}/>))}
             </div>

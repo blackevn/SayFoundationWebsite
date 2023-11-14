@@ -46,17 +46,18 @@ const Nav = () => {
    
     <div className={`flex justify-between items-center p-4 fixed w-screen box-border z-10 backdrop-blur-xl ${logoWhite && "bg-[#191A26]"}`}>
         <Link href={`/`} className='cursor-pointer'>
-        <img className='w-[150px] lg:w-[200px]' src={logoWhite ? "/WhiteLogo.png" : "/Horizontal@4x.png"} alt="Say Family Foundation Logo" />
+        <img className='w-[150px] lg:w-[200px]' src={logoWhite || darkMode ? "/WhiteLogo.png" : "/Horizontal@4x.png"} alt="Say Family Foundation Logo" />
         </Link>
 
        <div className='gap-4 items-center hidden lg:flex'>
         {links.map(link => (<NavLink path={logoWhite} name={link.name} link={link.link}/>))}
 
         <div>
-            <Toggle icon={FaAdjust} toggleEvent={ toggleDarkMode } on={FaSun} off={FaMoon } modifier={`${darkMode ? 'text-white' : ''}`} modifier1={''} modifier2={''} checked={darkMode} placeholder={''}/>
+     {   !logoWhite && <Toggle icon={FaAdjust} toggleEvent={ toggleDarkMode } on={FaSun} off={FaMoon } modifier={`${darkMode ? 'text-white' : ''}`} modifier1={''} modifier2={''} checked={darkMode} placeholder={''}/>}
         </div>
         </div>
-    <div className='lg:hidden'>
+    <div className='lg:hidden flex gap-8'>
+     { !logoWhite && <Toggle icon={FaAdjust} toggleEvent={ toggleDarkMode } on={FaSun} off={FaMoon } modifier={`${darkMode ? 'text-white' : ''}`} modifier1={''} modifier2={''} checked={darkMode} placeholder={''}/>}
         <Button
         clickEvent={handleToggle}
         icon={CgMenuLeft}

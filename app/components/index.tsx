@@ -12,7 +12,9 @@ import Input from "./ui/Input";
 import MobileMenu from "./ui/MobileMenu";
 import BG from "./ui/BG";
 import ContactForm from "./ui/ContactForm";
+import Toggle from "./ui/Toggle";
 export {
     Nav, Footer, Landing, Button, SecondSection, ThirdSection, ProjectsCards,
-    Achievements, TeamSection, ContactSection, Input, MobileMenu, BG, ContactForm
+    Achievements, TeamSection, ContactSection, Input, MobileMenu, BG, ContactForm,
+    Toggle
 }

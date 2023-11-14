@@ -3,7 +3,7 @@ import { Achievements, ContactSection, Landing, SecondSection, TeamSection, Thir
 
 export default function Home() {
   return (
-    <main className="">
+    <main className=" dark:bg-[#191A26] dark:text-gray-300">
       <Landing/>
       <Achievements/>
       <SecondSection/>

@@ -23,6 +23,9 @@ export interface ContextData {
   height: number
   menuToggle: boolean
   handleToggle: () => void
+  darkMode: boolean
+  toggleDarkMode: () => void  
+  setDarkMode?: Dispatch<SetStateAction<boolean>>
   setMenuToggle?:  Dispatch<SetStateAction<boolean>>
 
 }

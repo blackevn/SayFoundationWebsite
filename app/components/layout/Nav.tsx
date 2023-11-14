@@ -2,13 +2,15 @@
 import React from 'react'
 import { CgMenuLeft } from 'react-icons/cg'
 import { VscChromeClose } from 'react-icons/vsc'
-import { Button, MobileMenu } from '..'
+import { Button, MobileMenu, Toggle } from '..'
 import useToggle from '@/app/hooks/useToggle'
 import { NavigationLinks } from '@/types/interfaces'
 import NavLink from './NavLink'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { useGeneralContext } from '@/app/context/AppContext'
+import { IconBaseProps } from 'react-icons'
+import { FaAdjust, FaMoon, FaSun } from 'react-icons/fa'
 
 export const links: NavigationLinks[] = [
     {
@@ -31,15 +33,15 @@ export const links: NavigationLinks[] = [
 ]
 
 const Nav = () => {
+  
     const pathname: any = usePathname();
-
     const logoWhite = pathname === '/about'
+    const { menuToggle, handleToggle, darkMode, toggleDarkMode, setDarkMode } = useGeneralContext()
 
     console.log(pathname);
 
-    const { menuToggle, handleToggle } = useGeneralContext()
-
   return (
+
     <div className='relative z-[9999]'>
    
     <div className={`flex justify-between items-center p-4 fixed w-screen box-border z-10 backdrop-blur-xl ${logoWhite && "bg-[#191A26]"}`}>
@@ -49,6 +51,10 @@ const Nav = () => {
 
        <div className='gap-4 items-center hidden lg:flex'>
         {links.map(link => (<NavLink path={logoWhite} name={link.name} link={link.link}/>))}
+
+        <div>
+            <Toggle icon={FaAdjust} toggleEvent={ toggleDarkMode } on={FaSun} off={FaMoon } modifier={`${darkMode ? 'text-white' : ''}`} modifier1={''} modifier2={''} checked={darkMode} placeholder={''}/>
+        </div>
         </div>
     <div className='lg:hidden'>
         <Button
@@ -59,6 +65,7 @@ const Nav = () => {
         modifier='text-xl'
         />
         </div>
+
     </div>
 
     {  menuToggle &&  <div className={`top-20 right-0 w-full lg:hidden box-border grid place-items-center ${menuToggle ? 'z-[9999]': ''}`}>

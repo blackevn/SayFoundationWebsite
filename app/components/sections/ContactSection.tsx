@@ -7,7 +7,7 @@ import { ContactForm } from ".."
 const ContactSection = () => {
  
   return <>
-          <ContactForm/>
+          <ContactForm modifier=""/>
         </>
   
 }

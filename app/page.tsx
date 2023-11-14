@@ -8,8 +8,8 @@ export default function Home() {
       <Achievements/>
       <SecondSection/>
       <ThirdSection/>
-      <TeamSection/>
       <ContactSection/>
+      <TeamSection/>
     </main>
   )
 }

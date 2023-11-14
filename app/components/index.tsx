@@ -11,7 +11,8 @@ import ContactSection from "./sections/ContactSection";
 import Input from "./ui/Input";
 import MobileMenu from "./ui/MobileMenu";
 import BG from "./ui/BG";
+import ContactForm from "./ui/ContactForm";
 export {
     Nav, Footer, Landing, Button, SecondSection, ThirdSection, ProjectsCards,
-    Achievements, TeamSection, ContactSection, Input, MobileMenu, BG
+    Achievements, TeamSection, ContactSection, Input, MobileMenu, BG, ContactForm
 }

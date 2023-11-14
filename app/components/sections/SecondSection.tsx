@@ -1,7 +1,7 @@
 'use client'
 
 import { useGeneralContext } from "@/app/context/AppContext"
-import { motion } from "framer-motion"
+import { easeIn, motion } from "framer-motion"
 
 const SecondSection = () => {
 
@@ -22,7 +22,18 @@ const SecondSection = () => {
                     delay: .3
                 }
             }}
-        className="flex flex-col lg:flex-row p-8 place-items-center bg-[url('/asset.png')] bg-no-repeat bg-contain bg-left-bottom lg:gap-20 lg:bg-none">
+        className="flex flex-col lg:flex-row p-8 place-items-center bg-[url('/asset.png')] bg-no-repeat bg-contain bg-left-bottom lg:gap-20 lg:bg-none relative">
+    <motion.div
+       initial={{
+        opacity: 0,
+        rotateY: 50
+      }}
+      whileInView={{
+        opacity: 1,
+        transition: { duration: 1, ease: easeIn },
+        rotateY: 0
+      }}
+    className="absolute bg-[url('/Circle.png')] icons top-0 left-0"></motion.div>
         <div
         className='flex justify-end lg:w-[50%]'>
             <div className='text-3xl lg:text-4xl w-full text-center lg:text-end z-[3] font-semibold relative'>

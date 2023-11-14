@@ -5,8 +5,8 @@ export default function Home() {
   return (
     <main className="">
       <Landing/>
-      <SecondSection/>
       <Achievements/>
+      <SecondSection/>
       <ThirdSection/>
       <TeamSection/>
       <ContactSection/>

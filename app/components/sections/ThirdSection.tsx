@@ -28,7 +28,7 @@ const ThirdSection = () => {
         transition: { duration: 1, ease: easeIn },
         rotateY: 0
       }}
-    className="absolute bg-[url('/Circle.png')] icons top-0 right-0"></motion.div>
+    className="absolute bg-[url('/Rect.png')] icons top-0 right-0"></motion.div>
     <motion.h1 
     initial={{
         y:-20,

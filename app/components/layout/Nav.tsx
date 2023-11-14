@@ -37,15 +37,12 @@ const Nav = () => {
 
     console.log(pathname);
 
-    
-
-
- const { menuToggle, handleToggle } = useGeneralContext()
+    const { menuToggle, handleToggle } = useGeneralContext()
 
   return (
     <div className='relative z-[9999]'>
    
-    <div className={`flex justify-between items-center p-4 fixed w-screen box-border z-10 backdrop-blur-xl ${logoWhite && "bg-[#23283B]"}`}>
+    <div className={`flex justify-between items-center p-4 fixed w-screen box-border z-10 backdrop-blur-xl ${logoWhite && "bg-[#191A26]"}`}>
         <Link href={`/`} className='cursor-pointer'>
         <img className='w-[150px] lg:w-[200px]' src={logoWhite ? "/WhiteLogo.png" : "/Horizontal@4x.png"} alt="Say Family Foundation Logo" />
         </Link>
@@ -65,7 +62,7 @@ const Nav = () => {
     </div>
 
     {  menuToggle &&  <div className={`top-20 right-0 w-full lg:hidden box-border grid place-items-center ${menuToggle ? 'z-[9999]': ''}`}>
-            <div className='fixed w-full backdrop-blur-lg'>
+            <div className='fixed w-full backdrop-blur-lg bg-white/30'>
                 <MobileMenu links={links}/>
             </div>
         </div>}

@@ -3,14 +3,16 @@
 import { easeIn, motion } from "framer-motion"
 const page = () => {
   return <div className="grid place-items-center">
-    <div className="mt-8 ">
+    <div className="mt-8 bg-gray-500 relative">
+      <div className="absolute bg-gradient-to-t from-[#191A26] from-5% top-0 bottom-0 right-0 left-0"></div>
       <img
+ 
         alt='Say Family'
         src={'/FamilyColor.jpg'}
       />
     </div>
       
-      <div className=' p-4 text-gray-600 grid place-items-center relative'>
+      <div className=' p-4 text-gray-300 grid place-items-center relative bg-[#191A26]'>
       
         <motion.div 
            initial={{
@@ -46,10 +48,10 @@ const page = () => {
         transition: { duration: 2, delay: .4, ease: easeIn },
       }}
       className="font-light lg:w-[50%]">
-      <p className="mb-4 lg:text-xl font-semibold">
+      <p className="mb-4 lg:text-xl font-semibold text-center">
         Say Family Foundation is a dedicated charity organization operating in Ghana, committed to  improving the lives of underprivileged communities, providing access to education, healthcare, and social services, and promoting sustainable development
       </p>
-      <p className=" mb-4 lg:text-xl font-semibold">
+      <p className=" mb-4 lg:text-xl font-semibold text-center">
         Our vision is to create a Ghana where every individual has the opportunity to lead a healthy, educated, and dignified life.
       </p>
       <div className="text-center">

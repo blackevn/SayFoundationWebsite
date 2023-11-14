@@ -5,7 +5,7 @@ import { ProjectsCards } from "../components"
 import { motion } from "framer-motion"
 
 const ProjectPage = () => {
-  return <div className="pt-20 lg:pt-40 px-4 space-y-4">
+  return <div className="pt-20 lg:pt-40 px-4 space-y-4 dark:bg-[#191A26] dark:text-gray-300">
       {projects.map((project, i) => ( <motion.div 
            initial={{
             x: -20,

@@ -49,7 +49,7 @@ const SecondSection = () => {
                 </motion.h1> 
             </div> 
             </div>
-            <div className="lg:w-[80%] grid place-items-center lg:p-40 lg:bg-[url('/asset.png')] bg-no-repeat bg-contain bg-left-bottom p-4">
+            <div className="lg:w-[80%] grid place-items-center lg:p-40 lg:bg-[url('/asset.png')] bg-no-repeat bg-contain bg-left-bottom p-4 dark:text-gray-300">
                 <p className="p-4 rounded-lg backdrop-blur-lg font-bold text-gray-600">
                 We are Say Family Foundation, a team of 7 people based in Accra, Ghana. We are a non-profit organization that focus on saving civilian in the middle of war by providing basic needs like food, safe area, 
                 and others aspect of basic life. we are founded in 1980 by Azmar Bakalea, a genius and businessman behind others non-profit organization as a Product Red, and Capital AID. 

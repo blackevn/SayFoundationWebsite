@@ -17,6 +17,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ modifier }) => {
 
   return (
     <div className={`lg:flex relative ${modifier}`}>
+        <div className="absolute h-[70%] w-[70%] dark:bg-blue-400 bg-green-400 opacity-5 z-[-6] rounded-full blur-3xl left-10"></div>
             <motion.div 
               initial={{
       opacity: 0,
@@ -74,20 +75,21 @@ const ContactForm: React.FC<ContactFormProps> = ({ modifier }) => {
               }}
           
             className="lg:w-1/2 lg:h-full grid place-items-center p-4 relative">
-              <div className="absolute h-[70%] w-[70%] bg-green-400 opacity-5 z-[-6] rounded-full blur-3xl left-10"></div>
-              <div className="space-y-4 p-4 rounded-lg shadow-lg z-30 bg-white">
+            
+              <div className="space-y-4 p-4 rounded-2xl shadow-lg z-30 bg-white dark:bg-transparent">
               <Input 
-                modifier="border" 
+                modifier="border dark:bg-transparent" 
                 placeholder="Name"   />
               <Input 
+                modifier="border dark:bg-transparent"
                 placeholder="E-mail"  />
                 <textarea
-                className="textarea w-full"
+                className="textarea w-full dark:bg-transparent"
                 placeholder="Message"
                 />
                 <Button
                 text="Send"
-                modifier="btn bg-blue-600 text-white"
+                modifier="btn bg-blue-600 text-white border-0"
                 icon={FaArrowAltCircleRight}
                 />
               </div>

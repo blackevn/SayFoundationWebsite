@@ -72,7 +72,7 @@ const Nav = () => {
                         toggleEvent={ toggleDarkMode } 
                         on={FaSun} 
                         off={FaMoon } 
-                        modifier={`${darkMode ? 'text-white' : ''}`} 
+                        modifier={`${darkMode || logoWhite ? 'text-white' : ''}`} 
                         modifier1={''} 
                         modifier2={''} 
                         checked={darkMode} 
@@ -83,8 +83,8 @@ const Nav = () => {
                         modifier='text-xl' 
                         on={ CgMenuLeft} 
                         off={IoMdClose } 
-                        modifier1={ darkMode ? 'text-white' : 'text-black'} 
-                        modifier2={darkMode ? 'text-white' : 'text-black lg:h-1/4'} 
+                        modifier1={ darkMode || logoWhite  ? 'text-white' : 'text-black'} 
+                        modifier2={darkMode || logoWhite  ? 'text-white' : 'text-black lg:h-1/4'} 
                         checked={menuToggle} 
                         placeholder={''} />
             </div>

@@ -2,7 +2,7 @@ import { IconType } from "react-icons"
 import { FaIcons } from "react-icons/fa"
 
 interface ToggleProps {
-    icon: IconType
+    icon?: IconType
     toggleEvent: () => void
     on: IconType
     off: IconType

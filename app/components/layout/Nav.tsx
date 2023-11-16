@@ -2,6 +2,7 @@
 import React from 'react'
 import { CgMenuLeft } from 'react-icons/cg'
 import { VscChromeClose } from 'react-icons/vsc'
+import { IoMdClose } from "react-icons/io";
 import { Button, MobileMenu, Toggle } from '..'
 import useToggle from '@/app/hooks/useToggle'
 import { NavigationLinks } from '@/types/interfaces'
@@ -53,19 +54,40 @@ const Nav = () => {
         {links.map(link => (<NavLink path={logoWhite} name={link.name} link={link.link}/>))}
 
         <div>
-     {   !logoWhite && <Toggle icon={FaAdjust} toggleEvent={ toggleDarkMode } on={FaSun} off={FaMoon } modifier={`${darkMode ? 'text-white' : ''}`} modifier1={''} modifier2={''} checked={darkMode} placeholder={''}/>}
+     {   !logoWhite && <Toggle 
+                        icon={FaAdjust} 
+                        toggleEvent={ toggleDarkMode } 
+                        on={FaSun} 
+                        off={FaMoon } 
+                        modifier={`${darkMode ? 'text-white' : ''}`} 
+                        modifier1={''} 
+                        modifier2={''} 
+                        checked={darkMode} 
+                        placeholder={''}/>}
         </div>
         </div>
     <div className='lg:hidden flex gap-8'>
-     { !logoWhite && <Toggle icon={FaAdjust} toggleEvent={ toggleDarkMode } on={FaSun} off={FaMoon } modifier={`${darkMode ? 'text-white' : ''}`} modifier1={''} modifier2={''} checked={darkMode} placeholder={''}/>}
-        <Button
-        clickEvent={handleToggle}
-        icon={CgMenuLeft}
-        iconModifier={logoWhite && "text-white"}
-        text=''
-        modifier='text-xl'
-        />
-        </div>
+        { !logoWhite && <Toggle 
+                        icon={FaAdjust} 
+                        toggleEvent={ toggleDarkMode } 
+                        on={FaSun} 
+                        off={FaMoon } 
+                        modifier={`${darkMode ? 'text-white' : ''}`} 
+                        modifier1={''} 
+                        modifier2={''} 
+                        checked={darkMode} 
+                        placeholder={''}/>}
+
+                        <Toggle
+                        toggleEvent={handleToggle}
+                        modifier='text-xl' 
+                        on={ CgMenuLeft} 
+                        off={IoMdClose } 
+                        modifier1={ darkMode ? 'text-white' : 'text-black'} 
+                        modifier2={darkMode ? 'text-white' : 'text-black lg:h-1/4'} 
+                        checked={menuToggle} 
+                        placeholder={''} />
+            </div>
 
     </div>
 

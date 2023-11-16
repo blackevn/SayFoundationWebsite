@@ -47,7 +47,7 @@ const page = () => {
         opacity: 1,
         transition: { duration: 2, delay: .4, ease: easeIn },
       }}
-      className="font-light lg:w-[50%]">
+      className="font-light lg:w-[50%] -mt-20">
       <p className="mb-4 lg:text-xl font-semibold text-center">
         Say Family Foundation is a dedicated charity organization operating in Ghana, committed to  improving the lives of underprivileged communities, providing access to education, healthcare, and social services, and promoting sustainable development
       </p>

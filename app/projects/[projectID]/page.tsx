@@ -16,7 +16,7 @@ const router = useRouter()
 console.log(filteredProject);
 
 
-    return <div className='pt-20 lg:pt-40 min-h-screen px-4 '>
+    return <div className='pt-20 lg:pt-40 h-screen px-4 dark:bg-[#191A26] dark:text-gray-200  '>
           <Button
           clickEvent={router.back}
           text="Back" 
@@ -27,8 +27,8 @@ console.log(filteredProject);
             <img alt='image' className=' rounded-lg w-full lg:max-w-4xl ' src={filteredProject.map(project => project.image).toString()}/>
             </div>
             <div className='grid place-items-center py-8 w-screen'>
-            <div className='text-3xl font-bold py-10'>{filteredProject.map(project => project.name)}</div>
-              <p className=' w-full lg:max-w-[700px] '>{filteredProject.map(project => project.description)}</p>
+            <div className='text-3xl font-bold text-left'>{filteredProject.map(project => project.name)}</div>
+              <p className=' w-full lg:max-w-[700px] text-center'>{filteredProject.map(project => project.description)}</p>
             </div>
           </div>
   

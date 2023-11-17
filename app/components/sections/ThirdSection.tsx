@@ -41,7 +41,7 @@ const ThirdSection = () => {
         duration: .5,
       }
     }}
-    className="text-4xl lg:text-7xl font-bold py-4">Projects</motion.h1>
+    className="text-4xl lg:text-7xl font-bold py-2">Projects</motion.h1>
     <div className="flex flex-col lg:flex-row justify-between gap-4 lg:px-40 lg:py-20">
       {projects.map((card: ProjectsType, i) => (
       <motion.div 

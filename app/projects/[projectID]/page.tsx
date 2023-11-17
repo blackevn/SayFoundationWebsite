@@ -23,11 +23,11 @@ console.log(filteredProject);
           icon={FaArrowCircleLeft}
           modifier='btn cursor-pointer'
           />
-            <div className='text-3xl font-bold py-10'>{filteredProject.map(project => project.name)}</div>
             <div className='w-full grid place-items-center'>
             <img alt='image' className=' rounded-lg w-full lg:max-w-4xl ' src={filteredProject.map(project => project.image).toString()}/>
             </div>
             <div className='grid place-items-center py-8 w-screen'>
+            <div className='text-3xl font-bold py-10'>{filteredProject.map(project => project.name)}</div>
               <p className=' w-full lg:max-w-[700px] '>{filteredProject.map(project => project.description)}</p>
             </div>
           </div>

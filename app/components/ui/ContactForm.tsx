@@ -54,9 +54,9 @@ const ContactForm: React.FC<ContactFormProps> = ({ modifier }) => {
           
             className="lg:w-1/2 h-full grid place-items-center p-10">
               <div className="space-y-4 lg:w-[80%] grid place-items-center">
-                <div className="space-y-4">
+                <div className="space-y-4 z-30">
                   <h1 className=" text-5xl lg:text-7xl font-black text-blue-600">Help us change lives!</h1>
-                  <h2 className="text-2xl font-thin">If you would like any more information regarding giving What We Can, then please contact us and we will do our best to help.</h2>
+                  <h2 className="text-2xl font-thin">If you would like any more information regarding giving Say Family Foundation, then please contact us and we will do our best to help.</h2>
                 </div>
               </div>
             </motion.div>

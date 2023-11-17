@@ -50,7 +50,7 @@ const Nav = () => {
         <img className='w-[150px] lg:w-[200px]' src={logoWhite || darkMode ? "/WhiteLogo.png" : "/Horizontal@4x.png"} alt="Say Family Foundation Logo" />
         </Link>
 
-       <div className='gap-4 items-center hidden lg:flex'>
+       <div className='items-center hidden lg:flex gap-4'>
         {links.map(link => (<NavLink path={logoWhite} name={link.name} link={link.link}/>))}
 
         <div>
@@ -59,13 +59,13 @@ const Nav = () => {
                         toggleEvent={ toggleDarkMode } 
                         on={FaSun} 
                         off={FaMoon } 
-                        modifier={`${darkMode ? 'text-white' : ''}`} 
+                        modifier={`${darkMode ? 'text-white' : ''} m-4`} 
                         modifier1={''} 
                         modifier2={''} 
                         checked={darkMode} 
                         placeholder={''}/>}
-        </div>
-        </div>
+    </div>
+    </div>
     <div className='lg:hidden flex gap-8'>
         { !logoWhite && <Toggle 
                         icon={FaAdjust} 
@@ -86,7 +86,7 @@ const Nav = () => {
                         modifier1={ darkMode || logoWhite  ? 'text-white' : 'text-black'} 
                         modifier2={darkMode || logoWhite  ? 'text-white' : 'text-black lg:h-1/4'} 
                         checked={menuToggle} 
-                        placeholder={''} />
+                        placeholder={''}/>
             </div>
 
     </div>
